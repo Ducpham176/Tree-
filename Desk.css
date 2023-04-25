@@ -1,0 +1,875 @@
+* {
+    margin: 0;
+}
+body {
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+.overview {
+    width: 100vw;
+    height: 100vh;
+    background: #f5f2f2;
+    overflow: hidden;
+}
+#navbar {
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    display: grid;
+    grid-template-columns: 230px auto auto 250px;
+    font-family: 'Signika Negative', sans-serif;
+}
+.logo {
+    gap: 10px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container_logo {
+    display: flex;
+    background: transparent;
+    align-items: center;
+    padding-left: 1px;
+    width: 71%;
+    height: 50%;
+    position: absolute;
+    gap: 10px;
+    border-radius: 25px;
+    box-shadow: 0px 10px 20px #3333;
+    pointer-events: none;
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    z-index: 11;
+}
+.logoTitle {
+    display: flex;
+    align-items: center;
+    width: 110px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+}
+/*  */
+.introduce {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.container_intro {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+}
+.contentMain {
+    font-size: 25px;
+}
+.contentExtra {
+    letter-spacing: 0.91px;
+}
+/*  */
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.container_search {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    background: transparent;
+}
+#icon {
+    width: 30px;
+    height: 30px;
+    background:transparent;
+    background-image: url('search.png');
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.search input[type=search] {
+    height: 30px;
+    width: 200px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Signika Negative', sans-serif;
+    padding-left: 10px;
+}
+/*  */
+.loginArea {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.container_contact {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+#fa-regulra {
+    font-size: 20px;
+    width: 38px;
+    height: 38px;
+    background: rgb(255, 149, 73);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+}
+
+#fa-regulra:hover {
+    filter: brightness(70%);
+}
+
+main {
+    width: 100%;
+    position: relative;
+    top: 0px;
+    height: 83.3vh;
+    display: grid;
+    grid-template-columns: 230px auto;
+}
+#menu {
+    display: grid;
+    grid-template-rows: 25px 25px 25px 25px 25px 25px 25px auto;
+    gap: 20px;
+}
+.file {
+    height: 30px;
+    padding-left: 35px;
+    display: flex;
+    align-items: center;
+    border-left: 10px solid transparent;
+    gap: 0px;
+    transition: 0.3s;
+    cursor: pointer;
+    font-family: 'Signika Negative', sans-serif;
+}
+.file p {
+    padding-left: 2px;
+    width: 90px;
+}
+.file:nth-child(1) {
+    border-left: 8px solid #fd8204;
+    transition: 0.3s;
+    color: #fd8204;
+}
+.file:nth-child(1):hover {
+    border-left: 8px solid #000000;
+}
+.file:hover {
+    border-left: 8px solid #fd8204;
+    color: #fd8204;   color: #fd8204;
+}
+.fa-solid {
+    font-size: 20px;
+    width: 40px;
+}
+
+.createProduct {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+    background: transparent;
+}
+.create {
+    width: 65%;
+    height: 90%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 5px;
+    background:linear-gradient(to left,rgb(248, 132, 49), rgb(241, 101, 26));
+    padding: 0 5px;
+    box-sizing: border-box;
+    font-family: 'Signika Negative', sans-serif;
+    position: relative;
+}
+.create::before {
+    content: '';
+    width: 40px;
+    height: 50px;
+    left: 0;
+    top: 0;
+    background: #ffffff88;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    position: absolute;
+    background: transparent;
+    border-radius: 0% 150% 300% 0%;
+}
+.create::after {
+    content: '';
+    width: 20px;
+    height: 40px;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    position: absolute;
+    border-radius: 200% 0% 0% 120%;
+    z-index: 1;
+}
+.fa-plus {
+    width: 20px;
+    height: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
+.create b {
+    font-size: 15px;
+    color: rgb(25, 25, 25);
+}
+.create p {
+    font-size: 10px;
+    text-align: center;
+    color: rgb(24, 24, 24);
+}
+.create #setup {
+    background: #e3c2a899;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    display: flex;
+    padding: 4px 12px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: 'Signika Negative', sans-serif;
+    z-index: 2;
+    color: rgb(255, 255, 255);
+    transition: 0.4s;
+    text-shadow: 0px 0px 1px #17171755;
+}
+.create #setup:hover {
+    filter: brightness(70%);
+}
+/* Sản phẩm */
+.mainContent {
+    display: grid;
+    grid-template-rows: 200px auto;
+    gap: 10px;
+}
+.header_main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 30px;
+}
+.poster {
+    display: grid;
+    grid-template-columns: 200px auto;
+    background: white;
+    box-shadow: 0px 10px 20px #76767777;
+    border-radius: 2px;
+    border-top-left-radius: 5px;
+}
+.left {
+    background: white;
+    background-image: url('https://free.vector6.com/wp-content/uploads/2021/03/0000000294-cay-xanh-tai-hinh-cay-canh-png-180.png');
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 5px;
+}
+
+#white {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    outline: none;
+    background: rgb(39, 205, 78);
+    cursor: pointer;
+    border: 2px solid #00000066;
+    
+}
+#green {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    outline: none;
+    background: #e78eef;
+    cursor: pointer;
+    border: 2px solid #00000066;
+}
+#black {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    outline: none;
+    background: #41aee0;
+    cursor: pointer;
+    border: 2px solid #00000066;
+}
+.add {
+    display: flex;
+    gap: 0px;
+}
+.tongle {
+    display: flex;
+    gap: 20px;
+}
+#Toggle {
+    width: 40px;
+    height: 22px;
+    border: 1px solid #333;
+    padding-left: 14.5px;
+    font-size: 15px;
+    font-family: 'Signika Negative', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+}
+#delete {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #333;
+    cursor: pointer;
+    font-weight: bold;
+}
+#append {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #333;
+    cursor: pointer;
+    font-weight: bold;
+}
+.colorP {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.select {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+#discount {
+    border: 1px solid rgb(5, 171, 5);
+    border-radius: 4px;
+    height: 25px;
+    background: transparent;
+    cursor: pointer;
+    color: green;
+    font-family: 'Signika Negative', sans-serif;
+    transition: 0.4s;
+}
+#discount:focus {
+    background: #4e8d31;
+    color: white;
+}
+#buynow {
+    height: 25px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    background: #4e8d31;
+    color: white;
+    cursor: pointer;
+    font-family: 'Signika Negative', sans-serif;
+    transition: 0.3s;
+}
+#buynow:hover {
+    filter: brightness(70%);
+}
+select {
+    width: 45px;
+    height: 25px;
+    display: flex;
+    outline: none;
+    border: 1px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    color: green;
+    font-family: 'Signika Negative', sans-serif;
+}
+option {
+    font-family: 'Signika Negative', sans-serif;
+    padding: 5px;
+}
+/*  */
+.right {
+    font-family: 'Ysabeau', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.content_file {
+    background: transparent;
+    position: relative;
+}
+.content_file_des {
+    position: absolute;
+    width: 90%;
+    height: 88%;
+    background:linear-gradient(to left, rgb(241, 101, 26), rgb(248, 132, 49));
+    border-radius: 15px;
+    padding-left: 30px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 33px;
+    font-weight: bold;
+    letter-spacing: 0.91px;
+    z-index: 2;
+}
+.content_file_des::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 185px;
+    height: 130px;
+    background: transparent;
+    border-left: 5px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 5px solid rgba(255, 255, 255, 0.5);
+    position: absolute;
+    border-radius: 100% 40% 0% 120%;
+    z-index: 1;
+}
+#addBuy {
+    position: absolute;
+    bottom: 2.7rem;
+    left: 2rem;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background: transparent;
+    transition: 0.4s;
+    cursor: pointer;
+    z-index: 2;
+}
+#addBuy:hover {
+    transform: translateX(10px);
+    background: #ffffff1f;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/*  */
+.main_tree {
+    display: grid;
+    grid-template-columns: 620px auto;
+    background: transparent;
+}
+.main {
+    background: transparent;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 0;
+    box-sizing: border-box;
+}
+.card:nth-child(5) {
+    -webkit-mask-image: linear-gradient(to left, transparent 50px, black 50%);
+    mask-image: linear-gradient(to left, transparent 50px, black 50%);
+    transition: 0.8s ease-in-out;
+}
+
+.card {
+    padding: 1px;
+    box-sizing: border-box;
+    height: 190px;
+    background: white;
+    box-shadow: 0px 10px 20px #76767777;
+    border-radius: 1px;
+    font-family: 'Signika Negative', sans-serif;
+    transition: 1s ease-in-out;
+    -webkit-box-reflect: below 0 -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(11, 11, 11, 0.3) 100%);
+}
+
+.active {
+    transition: 1s ease-in-out;
+    -webkit-mask-image: linear-gradient(to left, transparent 50px, black 50%);
+    mask-image: linear-gradient(to left, transparent 50px, black 50%);
+}
+
+.footerCard {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+#fa_pluss {
+    background: #4e8d31;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+.product_banner1 {
+    transition: 1s ease-in-out;
+    height: 115px;
+    width: 140px;
+    background-image: url('https://free.vector6.com/wp-content/uploads/2021/03/0000000117-cay-xanh-chau-cay-tai-hinh-cay-canh-png-3.png');
+    background-size: cover;
+    -webkit-mask-image: linear-gradient(to top, transparent 10px, black 14%);
+    mask-image: linear-gradient(to top, transparent 10px, black 14%);
+}
+.product_banner2 {
+    transition: 1s ease-in-out;
+    height: 115px;
+    width: 140px;
+    background-image: url('https://free.vector6.com/wp-content/uploads/2021/03/0000000167-cay-xanh-chau-cay-tai-hinh-cay-canh-png-53.png');
+    background-size: cover;
+    -webkit-mask-image: linear-gradient(to top, transparent 10px, black 14%);
+    mask-image: linear-gradient(to top, transparent 10px, black 14%);
+}
+.product_banner3 {
+    transition: 1s ease-in-out;
+    height: 115px;
+    width: 140px;
+    background-image: url('https://free.vector6.com/wp-content/uploads/2021/03/0000000294-cay-xanh-tai-hinh-cay-canh-png-180.png');
+    background-size: cover;
+    -webkit-mask-image: linear-gradient(to top, transparent 10px, black 14%);
+    mask-image: linear-gradient(to top, transparent 10px, black 14%);
+}
+.product_banner4 {
+    transition: 1s ease-in-out;
+    height: 115px;
+    width: 140px;
+    background-image: url('https://free.vector6.com/wp-content/uploads/2021/03/0000000156-cay-xanh-chau-cay-tai-hinh-cay-canh-png-42.png');
+    background-size: cover;
+    -webkit-mask-image: linear-gradient(to top, transparent 10px, black 14%);
+    mask-image: linear-gradient(to top, transparent 10px, black 14%);
+}
+.hello {
+    display: flex; 
+}
+.name {
+    font-size: 13px;
+}
+.fa-star {
+    font-size: 14px;
+}
+.card .price {
+    font-size: 15px;
+}
+.card p {
+    font-size: 12px;
+}
+.content_hoo {
+    padding: 5px;
+    box-sizing: border-box;
+}
+#next {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    background: white;
+    border: 2px solid #222;
+    position: absolute;
+    top: 57%;
+    left: 62%;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #76767777;
+    z-index: 222;
+    transition: 0.4s ease;
+}
+#next:hover {
+    filter: brightness(70%);
+}
+.extra {
+    background: transparent;
+}
+.fa-chart-tree-map {
+    color: black;
+}
+.extra .top {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Signika Negative', sans-serif;
+}
+.fa-pagelines {
+    color: #4e8d31;
+}
+#all {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    width: 160px;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.hot {
+    width: 30px;
+    height: 20px;
+    filter: hue-rotate(120deg);
+}
+
+.bottom {
+    display: grid;
+    grid-template-rows: 73px 73px 73px;
+    width: 95%;
+    height: 100%;
+    gap: 10px;
+    margin-top: 0px;
+}
+.item {
+    background: transparent;
+    display: flex;
+    position: relative;
+    font-family: 'Signika Negative', sans-serif;
+    justify-content: space-evenly;
+}
+.item:nth-child(4) {
+    display: none;
+}
+.imageItem {
+    background-image: url('https://product.hstatic.net/1000382311/product/9_fe70b7838f52451da9fa0955f42bd0d2_master.png');
+    background-size: cover;
+    height: 100%;
+    width: 70px;
+}
+.span {
+    font-size: 14px;
+    border-right: 1px solid black;
+}
+span {
+    font-size: 14px;
+}
+.footerF {
+    width: 410%;
+    background: transparent;
+    height: 200%;
+    position: relative;
+    top: -50px;
+}
+.fooH3 {
+    font-size: 16px;
+    font-family: 'Signika Negative', sans-serif;
+}
+.Photo {
+    display: flex;
+    justify-content: space-between;
+}
+.Photo1 {
+    width: 200px;
+    background: red;
+    height: 40px;
+}
+.footerPhoto {
+    width: 100px;
+    height: 50px;
+    background: red;
+    position: absolute;
+}
+#jall {
+    cursor: pointer;
+} 
+/* Màn hình hơi lớn  */
+@media screen and (min-width: 1400px) {
+    .bottom {
+        display: grid;
+        grid-template-rows: 71px 71px 71px 71px;
+        width: 95%;
+        height: 100%;
+        gap: 10px;
+        margin-top: 0px;
+    }
+    .create {
+        width: 70%;
+        row-gap: 15px;
+    }
+    #next {
+        top: 55%;
+        left: 59%;
+    }
+    .card {
+        -webkit-box-reflect: below 0 -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(11, 11, 11, 0.4) 100%);
+    }
+    .item:nth-child(4) {
+        display: flex;
+    }
+}
+/* Màn hình điện thoại */
+@media screen and (max-width: 700px) {
+    .container_logo {
+        width: 53px;
+        position: fixed;
+        height: 53px;
+        left: 1.8rem;
+        z-index: 22;
+    }
+    .logoTitle {
+        display: none;
+    }
+    #menu {
+        position: fixed;
+        left: 0;
+        top: 6.5rem;
+        z-index: 11111;
+        background: white;
+        display: none;
+        box-shadow: 0px 0px 2px #3333;
+        animation: anime 0.7s ease-in-out forwards;
+    }
+    @keyframes anime {
+        0% {
+            left: -50%;
+        }
+        100% {
+            left: 0;
+        }
+    }
+    .mainContent {
+        position: absolute;
+        left: 0px;
+        z-index: 1;
+        gap: 12px;
+    }
+    .create {
+        height: 95%;
+        width: 70%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    .poster {
+        grid-template-columns: 110px auto;
+    }
+    .left {
+        position: relative;
+        top: 20%;
+        width: 110px;
+        height: 110px;
+        background-position: center;
+    }
+    .colorP {
+        gap: 4px;
+    }
+    .tongle {
+        gap: 8px;
+    }
+    .right p {
+        width: 210px;
+        font-size: 14px;
+    }
+    .main {
+        gap: 8px;
+    }
+    #navbar {
+        height: 76px;
+        grid-template-columns: 100px 130px 190px;
+    }
+
+    .active {
+        -webkit-mask-image: linear-gradient(to left, transparent 50px, black 80%);
+        mask-image: linear-gradient(to left, transparent 50px, black 50%);
+    }
+    .card:nth-child(4) {
+        -webkit-mask-image: linear-gradient(to left, transparent 50px, black 80%);
+        mask-image: linear-gradient(to left, transparent 50px, black 50%);
+        transition: 0.8s ease-in-out;
+    }
+    #next { 
+        position: absolute !important;
+        top: 70% !important;
+        left: 38.9% !important;
+    }
+    .container_contact {
+        position: relative;
+        top: 6.9rem;
+        right: 10px;
+        z-index: 1;
+        flex-direction: column;
+
+    }
+    .loginArea {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 11;
+    }
+    #fa-regulra {
+        width: 25px;
+        height: 25px;
+        padding: 2px;
+    }
+    .content_file_des {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        width: calc(50% - 10px);
+        height: 150px;
+        padding-left: 10px;
+        font-size: 19px;
+        color: white;
+        
+    }
+    .item:nth-child(3) {
+        display: none;
+    }
+    .item:nth-child(4) {
+        display: none;
+    }
+    .bottom {
+        position: fixed;
+        width: calc(50% - 10px);
+        height: 150px;
+        right: 10px;
+        bottom: 10px;
+    }
+    .contentItem p {
+        display: none;
+    }
+    .contentItem span {
+        display: none;
+    }
+    #jall {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        letter-spacing: -0.91px;
+    }
+    .content_file_des {
+        position: fixed;
+        background:linear-gradient(to left, rgba(241, 101, 26), rgba(248, 132, 49, 0.8));
+    }
+    #addBuy {
+        position: fixed;
+        bottom: 30px;
+        left: 16px;
+        font-weight: bold;
+        color: white;
+        z-index: 11;
+    }
+    .container_search {
+        background: #ffffff1f;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
